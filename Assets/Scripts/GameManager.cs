@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     blue3Spawn = blue3.transform.rotation;
     blue1SpawnPos = blue1.transform.position;
     blue2SpawnPos = blue2.transform.position;
+    blue3SpawnPos = blue3.transform.position;
   }
 
   private void OnEnable()
@@ -50,6 +51,9 @@ public class GameManager : MonoBehaviour
     blue1.transform.rotation = blue1Spawn;
     blue2.transform.rotation = blue2Spawn;
     blue3.transform.rotation = blue3Spawn;
+    blue1.transform.position = blue1SpawnPos;
+    blue2.transform.position = blue2SpawnPos;
+    blue3.transform.position = blue3SpawnPos;
     Debug.Log("Shoot again");
   }
   

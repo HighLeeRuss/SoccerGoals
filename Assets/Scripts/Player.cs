@@ -32,7 +32,8 @@ public class Player : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         //transform.Rotate(90f, 0f, 0f * Time.deltaTime); this is janky
-        //Rotate(); this sucks and seems to just do what above does ^
+        //Rotate(); this seems to just do what above does ^
+        //transform.rotation = Quaternion.Euler(90f, 0f, 0f);
         transform.rotation = Quaternion.RotateTowards(transform.rotation,Quaternion.Euler(90f, 0f, 0f), Time.time);
     }
 
