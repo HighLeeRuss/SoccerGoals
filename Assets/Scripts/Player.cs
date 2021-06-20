@@ -7,10 +7,9 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     //private float speed = 100f;
-    
-    
-    
 
+
+    
 
 
     private void OnEnable()
@@ -34,7 +33,7 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(1f);
         //transform.Rotate(90f, 0f, 0f * Time.deltaTime); this is janky
         //Rotate(); this sucks and seems to just do what above does ^
-        transform.rotation = Quaternion.RotateTowards(transform.rotation,Quaternion.Euler(90f, 0f, 0f), Time.time * 20f);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation,Quaternion.Euler(90f, 0f, 0f), Time.time);
     }
 
    //void Rotate()

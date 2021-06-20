@@ -20,7 +20,7 @@ public class Scoreboard : MonoBehaviour
     void AddScore()
     {
         score++;
-        print("Red Team has scored, the score is now " + score + ".");
+        Debug.Log("Red Team has scored, the score is now " + score + ".");
     }
     
 }

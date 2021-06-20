@@ -33,28 +33,28 @@ public class Ball : MonoBehaviour
           if(Vector3.Distance(this.transform.position,endPos.position) < 0.1f)
           {
               shoot = false;
-              takenShot = true;
-              if (takenShot)
-              {
-                  Reset();
-              }
+              //takenShot = true;
+              //if (takenShot)
+              //{
+              //    Reset();
+              //}
           }
        }
 
 
    }
 
-    private void Reset()
-    {
-        StartCoroutine(WaitForSec());
-    }
-
-    IEnumerator WaitForSec()
-    {
-        yield return new WaitForSeconds(4f);
-        gameObject.transform.position = respawn;
-        takenShot = false;
-
-
-    }
+    //private void Reset()
+    //{
+    //    StartCoroutine(WaitForSec());
+    //}
+//
+    //IEnumerator WaitForSec()
+    //{
+    //    yield return new WaitForSeconds(4f);
+    //    gameObject.transform.position = respawn;
+    //    takenShot = false;
+//
+//
+    //}
 }
