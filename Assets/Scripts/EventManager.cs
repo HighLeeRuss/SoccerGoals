@@ -13,4 +13,15 @@ public class EventManager : MonoBehaviour
         FallingActivated();
     }
 
+    public delegate void ScoreIncrease();
+
+    public static event OposingTeamFall ScoreActivated;
+
+    static public void ActivateScore()
+    {
+        ScoreActivated();
+    }
+
+
+
 }

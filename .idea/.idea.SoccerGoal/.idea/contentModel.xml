@@ -9,7 +9,9 @@
         <e p="Scripts" t="Include">
           <e p="Ball.cs" t="Include" />
           <e p="EventManager.cs" t="Include" />
+          <e p="GameManager.cs" t="Include" />
           <e p="Player.cs" t="Include" />
+          <e p="Scoreboard.cs" t="Include" />
           <e p="Test.cs" t="Include" />
         </e>
       </e>

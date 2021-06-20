@@ -17,6 +17,7 @@ public class Test : MonoBehaviour
         {
             Debug.Log("goal");
             EventManager.ActivateFalling();
+            EventManager.ActivateScore();
         }
     }
 }

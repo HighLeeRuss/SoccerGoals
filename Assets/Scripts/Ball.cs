@@ -30,15 +30,15 @@ public class Ball : MonoBehaviour
        if (shoot)
        {
            transform.position = Vector3.MoveTowards(transform.position,endPos.position,0.1f);
-           if(Vector3.Distance(this.transform.position,endPos.position) < 0.1f)
-           {
-               shoot = false;
-               takenShot = true;
-               if (takenShot)
-               {
-                   Reset();
-               }
-           }
+          if(Vector3.Distance(this.transform.position,endPos.position) < 0.1f)
+          {
+              shoot = false;
+              takenShot = true;
+              if (takenShot)
+              {
+                  Reset();
+              }
+          }
        }
 
 
