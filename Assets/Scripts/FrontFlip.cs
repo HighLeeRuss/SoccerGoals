@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class Backflip : MonoBehaviour
+public class FrontFlip : MonoBehaviour
 {
     public Vector3 axis = new Vector3(0,0,1);
     public float degrees = 360f;

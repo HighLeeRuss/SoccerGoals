@@ -10,9 +10,9 @@
           <e p="Rotate.cs" t="Include" />
         </e>
         <e p="Scripts" t="Include">
-          <e p="Backflip.cs" t="Include" />
           <e p="Ball.cs" t="Include" />
           <e p="EventManager.cs" t="Include" />
+          <e p="FrontFlip.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="Player.cs" t="Include" />
           <e p="Scoreboard.cs" t="Include" />
