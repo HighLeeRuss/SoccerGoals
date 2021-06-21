@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using System;
 
 public class EventManager : MonoBehaviour
 {
@@ -33,6 +35,13 @@ public class EventManager : MonoBehaviour
         ResetAcitvated();
     }
 
+    public event Action Test;
 
-
+    public void Update()
+    {
+        if (Test != null)
+        {
+            Test();
+        }
+    }
 }

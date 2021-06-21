@@ -7,7 +7,18 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     //private float speed = 100f;
+    public Vector3 axis = new Vector3(0,0,1);
+    public float degrees = 90f;
+    public float timespan = 1f;
 
+    private float rotated = 0;
+    private Vector3 rotationVector;
+    
+    void Start()
+    {
+        axis.Normalize();
+        rotationVector = axis * degrees;
+    }
 
     
 
@@ -25,30 +36,13 @@ public class Player : MonoBehaviour
 
     void Falling()
     {
-        StartCoroutine(WaitForSec());
+        rotated += degrees * (Time.deltaTime / timespan);
+        if (degrees > rotated)
+        {
+            transform.Rotate(rotationVector * (Time.deltaTime / timespan));
+        }
+      
     }
-
-    IEnumerator WaitForSec()
-    {
-        yield return new WaitForSeconds(1f);
-        //transform.Rotate(90f, 0f, 0f * Time.deltaTime); this is janky
-        //Rotate(); this seems to just do what above does ^
-        //transform.rotation = Quaternion.Euler(90f, 0f, 0f);
-        transform.rotation = Quaternion.RotateTowards(transform.rotation,Quaternion.Euler(90f, 0f, 0f), Time.time);
-    }
-
-   //void Rotate()
-   //{
-   //    var oldRotation = transform.rotation;
-   //    transform.Rotate(90, 0,0);
-   //    var newRoation = transform.rotation;
-
-   //    for (float t = 0.0f; t <= 1.0f; t += Time.deltaTime)
-   //    {
-   //        transform.rotation = Quaternion.Slerp(oldRotation, newRoation, t * speed);
-   //    }
-
-   //    transform.rotation = newRoation;
-   //}
+    
     
 }

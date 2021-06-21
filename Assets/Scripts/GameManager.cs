@@ -42,11 +42,12 @@ public class GameManager : MonoBehaviour
   void Reset()
   {
     StartCoroutine(WaitForSec());
+   
   }
 
   IEnumerator WaitForSec()
   {
-    yield return new WaitForSeconds(5f);
+    yield return new WaitForSeconds(7f);
     ball.transform.position = ballSpawn;
     blue1.transform.rotation = blue1Spawn;
     blue2.transform.rotation = blue2Spawn;
